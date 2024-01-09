@@ -5,8 +5,8 @@ import car.toyota.Camry;
 import car.toyota.Dyna;
 import car.toyota.Hiance;
 import car.toyota.Solara;
-import exeption.NoModelException;
 import exeption.StockOverflowException;
+
 import java.util.Arrays;
 
 public class Stock {
@@ -21,21 +21,21 @@ public class Stock {
         try {
             checkCapacity();
             CarsCamry = Arrays.copyOf(CarsCamry, CarsCamry.length + 1);
+            CarsCamry[CarsCamry.length - 1] = camry;
             countCar++;
         } catch (StockOverflowException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public Camry getCamry() throws NoModelException {
-        if (checkModelCar(CarsCamry)) {
+    public Camry getCamry() {
+        if (checkModelCar(CarsCamry) > 0) {
             Camry camry = CarsCamry[CarsCamry.length - 1];
             CarsCamry = Arrays.copyOf(CarsCamry, CarsCamry.length - 1);
             countCar--;
             return camry;
-        } else {
-            throw new NoModelException("Camry");
         }
+        return null;
     }
 
     public void showQuantityCamry() {
@@ -46,21 +46,21 @@ public class Stock {
         try {
             checkCapacity();
             CarsSolara = Arrays.copyOf(CarsSolara, CarsSolara.length + 1);
+            CarsSolara[CarsSolara.length - 1] = solara;
             countCar++;
         } catch (StockOverflowException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public Solara getSolara() throws NoModelException {
-        if (checkModelCar(CarsCamry)) {
+    public Solara getSolara() {
+        if (checkModelCar(CarsSolara) > 0) {
             Solara solara = CarsSolara[CarsSolara.length - 1];
             CarsSolara = Arrays.copyOf(CarsSolara, CarsSolara.length - 1);
             countCar--;
             return solara;
-        } else {
-            throw new NoModelException("Solara");
         }
+        return null;
     }
 
     public void showQuantitySolara() {
@@ -71,21 +71,21 @@ public class Stock {
         try {
             checkCapacity();
             CarsHiance = Arrays.copyOf(CarsHiance, CarsHiance.length + 1);
+            CarsHiance[CarsHiance.length - 1] = hiance;
             countCar++;
         } catch (StockOverflowException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public Hiance getHiance() throws NoModelException {
-        if (checkModelCar(CarsCamry)) {
+    public Hiance getHiance() {
+        if (checkModelCar(CarsHiance) > 0) {
             Hiance hiance = CarsHiance[CarsHiance.length - 1];
             CarsHiance = Arrays.copyOf(CarsHiance, CarsHiance.length - 1);
             countCar--;
             return hiance;
-        } else {
-            throw new NoModelException("Hiance");
         }
+        return null;
     }
 
     public void showQuantityHiance() {
@@ -96,21 +96,21 @@ public class Stock {
         try {
             checkCapacity();
             CarsDyna = Arrays.copyOf(CarsDyna, CarsDyna.length + 1);
+            CarsDyna[CarsDyna.length - 1] = dyna;
             countCar++;
         } catch (StockOverflowException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public Dyna getDyna() throws NoModelException {
-        if (checkModelCar(CarsCamry)) {
+    public Dyna getDyna() {
+        if (checkModelCar(CarsDyna) > 0) {
             Dyna dyna = CarsDyna[CarsDyna.length - 1];
             CarsDyna = Arrays.copyOf(CarsDyna, CarsDyna.length - 1);
             countCar--;
             return dyna;
-        } else {
-            throw new NoModelException("Dyna");
         }
+        return null;
     }
 
     public void showQuantityDyna() {
@@ -123,7 +123,7 @@ public class Stock {
         }
     }
 
-    private boolean checkModelCar(Car[] cars) {
-        return cars.length != 0;
+    private int checkModelCar(Car[] cars) {
+        return cars.length;
     }
 }

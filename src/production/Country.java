@@ -3,5 +3,6 @@ package production;
 public enum Country {
     RUSSIA,
     USA,
-    GERMANY
+    GERMANY,
+    JAPAN
 }
