@@ -1,7 +1,6 @@
-package salon;
+package dealer;
 
-import car.Car;
-
+import car.type.Car;
 import java.io.FileWriter;
 import java.io.IOException;
 

@@ -1,6 +1,6 @@
-package car;
+package car.type;
 
-import car.model.*;
+import car.component.*;
 import production.Country;
 
 public abstract class Convertible extends PassengerCar {

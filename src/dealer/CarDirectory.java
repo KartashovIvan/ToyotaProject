@@ -1,4 +1,4 @@
-package salon;
+package dealer;
 
 public enum CarDirectory {
     CAMRY("Camry", 5000),

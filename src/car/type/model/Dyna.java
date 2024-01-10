@@ -1,7 +1,7 @@
-package car.toyota;
+package car.type.model;
 
-import car.CargoVan;
-import car.model.*;
+import car.component.*;
+import car.type.CargoVan;
 import production.Country;
 
 public class Dyna extends CargoVan implements CarFunction {

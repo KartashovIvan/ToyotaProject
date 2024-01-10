@@ -1,6 +1,6 @@
-package car.model;
+package car.component;
 
-public class Electrics {
+public class Engine {
     private boolean defective;
 
     public boolean isDefective() {

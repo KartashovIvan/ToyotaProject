@@ -1,4 +1,4 @@
-package car.model;
+package car.component;
 
 public class Usb {
     public void connect(String item) {

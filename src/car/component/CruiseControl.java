@@ -1,4 +1,4 @@
-package car.model;
+package car.component;
 
 public class CruiseControl {
     private boolean work;

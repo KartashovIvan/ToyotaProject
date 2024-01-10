@@ -1,4 +1,4 @@
-package car.model;
+package car.component;
 
 public class Headlight {
     private boolean defective;

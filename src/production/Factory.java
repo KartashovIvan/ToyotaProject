@@ -1,6 +1,6 @@
 package production;
 
-import car.model.*;
+import car.component.*;
 
 public class Factory {
     private final Country country;

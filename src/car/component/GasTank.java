@@ -1,4 +1,4 @@
-package car.model;
+package car.component;
 
 public class GasTank {
     private final double volume;

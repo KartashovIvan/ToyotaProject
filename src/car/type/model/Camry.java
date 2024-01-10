@@ -1,7 +1,7 @@
-package car.toyota;
+package car.type.model;
 
-import car.PassengerCar;
-import car.model.*;
+import car.component.*;
+import car.type.PassengerCar;
 import production.Country;
 
 public class Camry extends PassengerCar implements CarFunction {

@@ -1,10 +1,10 @@
 package production;
 
-import car.model.*;
-import car.toyota.Camry;
-import car.toyota.Dyna;
-import car.toyota.Hiance;
-import car.toyota.Solara;
+import car.component.*;
+import car.type.model.Camry;
+import car.type.model.Dyna;
+import car.type.model.Hiance;
+import car.type.model.Solara;
 import exeption.CountyFactoryNotEqualException;
 
 public class Conveyor {

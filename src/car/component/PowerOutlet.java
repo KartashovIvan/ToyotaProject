@@ -1,4 +1,4 @@
-package car.model;
+package car.component;
 
 public class PowerOutlet {
     public void charge(String item) {

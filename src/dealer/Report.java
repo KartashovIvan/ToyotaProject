@@ -1,7 +1,6 @@
-package salon;
+package dealer;
 
-import car.Car;
-
+import car.type.Car;
 import java.util.Arrays;
 
 public class Report {
@@ -16,7 +15,7 @@ public class Report {
         return sellCars;
     }
 
-    public void addSellerCar(Car car){
+    public void addSellerCar(Car car) {
         sellCars = Arrays.copyOf(sellCars, sellCars.length + 1);
         sellCars[sellCars.length - 1] = car;
     }

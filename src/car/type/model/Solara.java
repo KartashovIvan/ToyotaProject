@@ -1,7 +1,7 @@
-package car.toyota;
+package car.type.model;
 
-import car.Convertible;
-import car.model.*;
+import car.component.*;
+import car.type.Convertible;
 import production.Country;
 
 public class Solara extends Convertible implements CarFunction {

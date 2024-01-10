@@ -1,6 +1,6 @@
-package salon;
+package dealer;
 
-import car.Car;
+import car.type.Car;
 
 public class Cashier {
     public static double profit = 0;
