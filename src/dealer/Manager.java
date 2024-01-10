@@ -40,7 +40,7 @@ public class Manager {
 
     public void generateReport() {
         double expenses = 0;
-        try (FileWriter fileWriter = new FileWriter("./src/report/report.txt")) {
+        try (FileWriter fileWriter = new FileWriter("./resources/report/report.txt")) {
             fileWriter.write("Имя менеджера - " + this.name + "\n");
             for (Car car : report.getSellCars()) {
                 String nameCar = car.getClass().getSimpleName();
